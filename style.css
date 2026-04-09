@@ -1,0 +1,384 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FAFAFA;
+    background-image: 
+        linear-gradient(rgba(66, 133, 244, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(66, 133, 244, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-attachment: fixed;
+    color: #333333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px 40px;
+}
+
+.gsa-text-gradient {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    background: linear-gradient(90deg, #1A73E8 0%, #4285F4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 60px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    background-color: #FFFFFF;
+    padding: 12px 35px;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #EAEAEA;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4285F4;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 80px;
+}
+
+#home {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 80px;
+}
+
+#home h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #111111;
+    letter-spacing: -0.5px;
+}
+
+#home p {
+    color: #666666;
+    font-size: 1rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Memungkinkan kartu turun ke baris baru */
+    gap: 25px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    padding: 35px 30px;
+    border-radius: 16px;
+    flex: 1 1 calc(33.333% - 25px); /* Membagi rata 3 kartu dalam 1 baris */
+    min-width: 250px; /* Menjaga agar kartu tidak terlalu kurus di layar kecil */
+    border: 1px solid #EAEAEA;
+    border-top: 4px solid #4285F4;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(66, 133, 244, 0.15);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+#inventory h2, #borrow h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #111111;
+    letter-spacing: -0.5px;
+}
+
+.inventory-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.add-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.add-form input, .add-form select {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    background-color: #FAFAFA;
+    transition: border-color 0.3s ease;
+}
+
+.add-form input:focus, .add-form select:focus {
+    outline: none;
+    border-color: #4285F4;
+    background-color: #FFFFFF;
+}
+
+.add-btn {
+    padding: 0 25px;
+    background-color: #1A73E8;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #4285F4;
+}
+
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resource-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #EEEEEE;
+    border-radius: 8px;
+    background-color: #FAFAFA;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border-color: #4285F4;
+}
+
+.resource-info h4 {
+    color: #111111;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.resource-info p {
+    color: #666666;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.delete-btn {
+    background-color: #FFFFFF;
+    color: #EA4335;
+    border: 1px solid #EA4335;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #EA4335;
+    color: #FFFFFF;
+}
+
+.clean-form {
+    background-color: #FFFFFF;
+    padding: 50px;
+    border-radius: 16px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333333;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+.clean-form select {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #DDDDDD;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #333333;
+    background-color: #FAFAFA;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+.clean-form select:focus {
+    outline: none;
+    border-color: #4285F4;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.15);
+    background-color: #FFFFFF;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4285F4;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #666666;
+    cursor: pointer;
+}
+
+.error-msg {
+    color: #EA4335;
+    font-size: 0.85rem;
+    margin-top: 6px;
+    display: none;
+    font-weight: 500;
+}
+
+.input-error {
+    border-color: #EA4335 !important;
+    background-color: #FFF8F7 !important;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #1A73E8;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 25px;
+}
+
+.submit-btn:hover {
+    background-color: #4285F4;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #999999;
+    font-size: 0.85rem;
+    border-top: 1px solid #EAEAEA;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+    
+    header {
+        padding: 60px 20px 40px;
+    }
+    
+    .gsa-text-gradient {
+        font-size: 2.2rem;
+    }
+    
+    #home h2 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul {
+        gap: 20px;
+        padding: 10px 20px;
+    }
+    
+    .clean-form, .inventory-container {
+        padding: 30px;
+    }
+    
+    .add-form {
+        flex-direction: column;
+    }
+    
+    .add-btn {
+        padding: 14px;
+    }
+}
